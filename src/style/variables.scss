@@ -1,0 +1,76 @@
+/*color*/
+$dark-black-bg: #1F1F1F;
+$dark-grey-bg: #171717;
+$white-bg: #FFFFFF;
+$beige-bg: #E8E8E8;
+$text-white-th: #676767;
+
+/*text*/
+%h2 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 73px;
+}
+
+/*шапка и подписи к соц сетям*/
+%link {
+    font-weight: 400; //700
+    font-size: 18px;
+    line-height: 23px;
+}
+
+/*основной текст на страницах*/
+%mainText {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 39px;
+}
+
+/*текст на странице проекты*/
+%smallText {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+%pageSignature {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+@mixin poly($left) {
+    height: 100%;
+    position: absolute;
+    left: $left;
+    width: 350px;
+    top: 0;
+    transition: transform 0.5s ease-in;
+    //clip-path: polygon(50% 0, 77% 1%, 93% 24%, 98% 65%, 75% 98%, 50% 100%, 21% 98%, 4% 62%, 5% 26%, 25% 1%);
+    //clip-path: polygon(49% 0, 76% 3%, 91% 25%, 96% 68%, 77% 94%, 50% 100%, 21% 95%, 7% 66%, 3% 23%, 25% 4%);
+}
+
+
+$bg-main: $dark-black-bg !default;
+$bg: $dark-grey-bg !default;
+$light: false !default;
+
+@if $light {
+    $bg-main: $white-bg;
+    $bg: $beige-bg;
+}
+// @mixin theme($light) {
+//     @if $light {
+//         $bg-main: $white-bg;
+//         $bg: $beige-bg;
+//     }
+// }
+// @mixin theme($dark:true) {
+//     @if $dark {
+//         $bg-main: $dark-black-bg;
+//         $bg: $dark-grey-bg;
+//     } @else {
+//         $bg-main: $white-bg;
+//         $bg: $beige-bg;
+//     }
+// }

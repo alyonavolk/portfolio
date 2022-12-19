@@ -1,0 +1,19 @@
+@import '../../style/variables.scss';
+
+.app{
+    &__back{
+        z-index: 1;
+    }
+    &__content{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.content{
+    &__main{
+        max-width: 800px;
+        max-height: 300px;
+        padding: 10% 0;
+    }
+}

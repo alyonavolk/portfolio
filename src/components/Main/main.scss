@@ -1,0 +1,23 @@
+@import '../../style/variables.scss';
+
+.main{
+    margin: 0 140px;
+    max-width: 600px;
+    max-height: 300px;
+    &__content{
+
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 62px;
+        color: $white-bg;
+        margin-bottom: 15px;
+    }
+    &__descr{
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 29px;
+        color: #828282;
+    }
+}

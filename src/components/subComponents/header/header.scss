@@ -1,0 +1,28 @@
+@import '../../../style/variables.scss';
+
+.header{
+    margin: 30px 140px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 47px;
+        color: $white-bg;
+    }
+    &__links{
+        display: flex;
+        gap: 40px;
+        @extend %link;
+        color: $white-bg;
+    }
+    &__link{
+        &_active, :hover{
+            color: $beige-bg;
+        }
+    }
+}
