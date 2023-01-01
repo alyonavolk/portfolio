@@ -1,0 +1,20 @@
+/* :root{
+    --bg-main--dark: #1F1F1F; /*dark-black-bg*/
+    /*--bg--dark: #171717; /*dark-grey-bg*/
+
+    /*-bg-main--light: #FFFFFF; /*white-bg*/
+    /*--bg--light: #E8E8E8; /*beige-bg*/
+
+    /*--bg-main: var(--bg-main--dark);
+    --bg: var(--bg--dark);
+} */
+
+:root, [data-theme="default"]{
+    --bg-main: #1F1F1F;
+    --bg: #171717;
+}
+
+[data-theme="light"] {
+    --bg-main: #FFFFFF;
+    --bg: #E8E8E8;
+}

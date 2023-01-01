@@ -5,6 +5,9 @@ $white-bg: #FFFFFF;
 $beige-bg: #E8E8E8;
 $text-white-th: #676767;
 
+$bg-main: var(--bg-main);
+$bg: var(--bg);
+
 /*text*/
 %h2 {
     font-weight: 700;
@@ -51,14 +54,13 @@ $text-white-th: #676767;
 }
 
 
-$bg-main: $dark-black-bg !default;
-$bg: $dark-grey-bg !default;
-$light: false !default;
 
-@if $light {
-    $bg-main: $white-bg;
-    $bg: $beige-bg;
-}
+// $light: false !default;
+
+// @if $light {
+//     $bg-main: $white-bg;
+//     $bg: $beige-bg;
+// }
 // @mixin theme($light) {
 //     @if $light {
 //         $bg-main: $white-bg;

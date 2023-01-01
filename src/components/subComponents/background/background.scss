@@ -1,6 +1,6 @@
 @import '../../../style/variables.scss';
 
-.poligon{
+.polygon{
     height: 100%;
 
     // @for $i from 1 through 8 {
@@ -14,7 +14,7 @@
     //   }
     &_1{
         @include poly(43vw);
-        background: $dark-grey-bg;
+        background: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
             transform: translate(-3vw);
@@ -22,7 +22,7 @@
     }
     &_2{
         @include poly(44vw);
-        background-color: $dark-black-bg;
+        background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
             transform: translate(-2vw);
@@ -30,7 +30,7 @@
     }
     &_3{
         @include poly(48vw);
-        background-color: $dark-grey-bg;
+        background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
             transform: translate(-3vw);
@@ -38,7 +38,7 @@
     }
     &_4{
         @include poly(50vw);
-        background-color: $dark-black-bg;
+        background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
             transform: translate(-2vw);
@@ -46,7 +46,7 @@
     }
     &_5{
         @include poly(53vw);
-        background-color: $dark-grey-bg;
+        background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
             transform: translate(-2vw);
@@ -54,7 +54,7 @@
     }
     &_6{
         @include poly(57vw);
-        background-color: $dark-black-bg;
+        background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
             transform: translate(-2vw);
@@ -62,7 +62,7 @@
     }
     &_7{
         @include poly(59vw);
-        background-color: $dark-grey-bg;
+        background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
             transform: translate(-2vw);
@@ -70,7 +70,7 @@
     }
     &_8{
         @include poly(63vw);
-        background-color: $dark-black-bg;
+        background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
             transform: translate(-2vw);
@@ -79,7 +79,7 @@
     
     &_9{
         @include poly(65vw);
-        background-color: $dark-grey-bg;
+        background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
             transform: translate(-2vw);
@@ -87,7 +87,7 @@
     }
     &_10{
         @include poly(70vw);
-        background-color: $dark-black-bg;
+        background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
             transform: translate(-2vw);
@@ -95,7 +95,7 @@
     }
     &_11{
         @include poly(71.5vw);
-        background-color: $dark-grey-bg;
+        background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
             transform: translate(-2vw);
