@@ -4,8 +4,9 @@ import './App.scss';
 import Main from '../Main/main';
 import Background from '../subComponents/background/background';
 import Header from '../subComponents/header/header';
+import Switcher from '../subComponents/switcher/switcher';
 
-
+/*анимацию попробовать заебашить с помощью reactTransitionGroup */
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -26,7 +27,7 @@ function App() {
               </div>
             </Route>
           </Switch>
-          <button onClick={() => setTheme(!theme)}>theme</button>
+          <Switcher onClick={() => setTheme(!theme)} theme={theme}/>
         </div>
       </div>
     </Router>

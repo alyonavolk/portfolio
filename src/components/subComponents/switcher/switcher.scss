@@ -1,0 +1,101 @@
+@import '../../../style/variables.scss';
+
+.switch{
+    width: 85px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    position: relative;
+    transition: all 350ms ease-in;
+    &_dark{
+        border: 1px solid #1F1F1F;
+        background: #1F1F1F;
+        &::before{
+            content: '';
+            width: 31px;
+            height: 31px;
+            top: 2px;
+            left: 55px;
+            position: absolute;
+            border-radius: 82px;
+            animation-name: switch;
+            animation-duration: 350ms;
+            animation-fill-mode: forwards;
+            background: #6E6E6E;
+            border: 1px solid #6E6E6E;
+            z-index: 2;
+        }
+        &BG{
+            margin: auto 3px;
+            width: 34px;
+            height: 34px;
+            background-image: url('../../../resource/img/moon.svg');
+            transition: all 150ms ease-in;
+            position: relative;
+
+        }
+    }
+    &_light{
+        border: 1px solid #E8E8E8;
+        background: #E8E8E8;
+        &::before{
+            content: '';
+            animation-name: reverse;
+            animation-duration: 350ms;
+            animation-fill-mode: forwards;
+            transition: all 350ms ease-in;
+            width: 31px;
+            height: 31px;
+            top: 2px;
+            left: 50px;
+            position: absolute;
+            border-radius: 82px;
+            border: 1px solid #AEAEAE;
+            background: #AEAEAE;
+            z-index: 2;
+        }
+        &BG{
+            margin: auto 0;
+            width: 34px;
+            height: 34px;
+            background-image: url('../../../resource/img/sun.svg');
+            transition: all 150ms ease-in;
+            position: relative;
+            margin: auto 0 auto 43px;
+        }
+    }
+    &_bg{
+        border-radius: 5px;
+        background: $beige-bg;
+        left: 135px;
+        top: 45px;
+    }
+}
+
+@keyframes reverse {
+    0% {
+        left: 31px;
+        width: 40px;
+    }
+    60% {
+        left: 25px;
+        width: 50px;
+    }
+    100% {
+        left: 4px;
+    }
+}
+
+@keyframes switch {
+  0% {
+    left: 4px;
+  }
+  60% {
+    left: 4px;
+    width: 50px;
+  }
+  100% {
+    left: 45px;
+    width: 31px;
+  }
+}
