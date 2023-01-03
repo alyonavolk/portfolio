@@ -13,7 +13,7 @@
     //     }
     //   }
     &_1{
-        @include poly(43vw);
+        @include poly(43vw, 10ms);
         background: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
@@ -21,7 +21,7 @@
         }
     }
     &_2{
-        @include poly(44vw);
+        @include poly(44vw, 150ms);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
@@ -29,7 +29,7 @@
         }
     }
     &_3{
-        @include poly(48vw);
+        @include poly(48vw, 200ms);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
@@ -37,7 +37,7 @@
         }
     }
     &_4{
-        @include poly(50vw);
+        @include poly(50vw, 300ms);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
@@ -45,7 +45,7 @@
         }
     }
     &_5{
-        @include poly(53vw);
+        @include poly(53vw, 300ms);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
@@ -53,7 +53,7 @@
         }
     }
     &_6{
-        @include poly(57vw);
+        @include poly(57vw, 500ms);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
@@ -61,7 +61,7 @@
         }
     }
     &_7{
-        @include poly(59vw);
+        @include poly(59vw, 600ms);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
@@ -69,7 +69,7 @@
         }
     }
     &_8{
-        @include poly(63vw);
+        @include poly(63vw, 700ms);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
@@ -78,7 +78,7 @@
     }
     
     &_9{
-        @include poly(65vw);
+        @include poly(65vw, 800ms);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
@@ -86,7 +86,7 @@
         }
     }
     &_10{
-        @include poly(70vw);
+        @include poly(70vw, 900ms);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
         &:hover{
@@ -94,7 +94,7 @@
         }
     }
     &_11{
-        @include poly(71.5vw);
+        @include poly(71.5vw, 1000ms);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         &:hover{
@@ -102,3 +102,4 @@
         }
     }
 }
+

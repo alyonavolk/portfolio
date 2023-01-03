@@ -42,17 +42,30 @@ $bg: var(--bg);
     line-height: 33px;
 }
 
-@mixin poly($left) {
+@mixin poly($left, $time) {
     height: 100%;
     position: absolute;
     left: $left;
     width: 350px;
     top: 0;
     transition: transform 0.5s ease-in;
+    animation-name: animBg;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-delay: $time;
     //clip-path: polygon(50% 0, 77% 1%, 93% 24%, 98% 65%, 75% 98%, 50% 100%, 21% 98%, 4% 62%, 5% 26%, 25% 1%);
     //clip-path: polygon(49% 0, 76% 3%, 91% 25%, 96% 68%, 77% 94%, 50% 100%, 21% 95%, 7% 66%, 3% 23%, 25% 4%);
 }
 
+@keyframes animBg {
+    50% {
+        transform: translate(-2vw);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
 
 
 // $light: false !default;

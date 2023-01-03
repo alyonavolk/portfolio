@@ -1,6 +1,11 @@
 @import '../../style/variables.scss';
 
 .app{
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+    &__anim{
+        opacity: 0;
+    }
     &__back{
         z-index: 1;
     }
@@ -16,4 +21,32 @@
         max-height: 300px;
         padding: 10% 0;
     }
+}
+
+// .fade-enter  {
+//   opacity:  0;
+//   z-index:  1;
+// }
+
+// .fade-enter.fade-enter-active  {
+//   opacity:  1;
+//   transition: opacity 250ms;
+// }
+
+.fade-appear,
+.fade-enter {
+opacity: 0;
+z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+opacity: 1;
+transition: opacity 450ms linear 250ms;
+}
+.fade-exit {
+opacity: 1;
+}
+.fade-exit.fade-exit-active {
+opacity: 0;
+transition: opacity 150ms linear;
 }
