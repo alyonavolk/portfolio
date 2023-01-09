@@ -1,29 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Route, Switch, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 import './App.scss';
-import Main from '../Main/main';
 import Background from '../subComponents/background/background';
-import Header from '../subComponents/header/header';
 import Switcher from '../subComponents/switcher/switcher';
-import {CSSTransition, TransitionGroup } from 'react-transition-group';
+import Routes from '../Routes/Routes';
+import Header from '../subComponents/header/header';
 
 /*анимацию попробовать заебашить с помощью reactTransitionGroup */
 
 function App() {
   const [theme, setTheme] = useState('dark');
   const [themeAnim, setThemeAnim] = useState(false);
-  const lock = useLocation();
 
   useEffect(() => {
     const bgMain = `var(--bg-main--${theme})`;
     const bg = `var(--bg--${theme})`;
 
+    setTimeout(() => {
     document.body.style.setProperty('--bg-main', bgMain);
     document.body.style.setProperty('--bg', bg);
-  }, [theme])
-  useEffect(() => {
+    }, 350);
+    
+    if (theme === 'dark') {
+      document.body.style.transition = 'background 400ms linear';
+      document.body.style.background = 'linear-gradient(to right, #171717 50%, #1F1F1F 50%)';
+    } else {
+      document.body.style.transition = 'background 400ms linear';
+      document.body.style.background = 'linear-gradient(to right, #FFFFFF 50%, #E8E8E8 50%)';
+    }
     setTimeout(() => setThemeAnim(false), 400);
-  }, [themeAnim])
+  }, [theme, themeAnim])
 
   const SwitcherTheme = () => {
     setThemeAnim(true);
@@ -31,34 +37,21 @@ function App() {
   }
 
   return (
-    <div className={`app ${ themeAnim ? 'app__anim' : ''}`}>
-      <div className='app__back'>
-        <Background />
-      </div>
-      <TransitionGroup>
-      <CSSTransition timeout = {500}
-            classNames = 'fade'
-            key={lock.key}>
-          <div className='app__content'>
-            <Header />
-            <Switch location={lock}>
-              <Route exact path='/'>
-                <div className='content__main'>
-                  <Main />
-                </div>
-              </Route>
-              <Route exact path='/1'>
-                <div className='content__main'>
-                  <Main />
-                </div>
-              </Route>
-            </Switch>
-            <Switcher onClick={SwitcherTheme}
+    <Router>
+      <div className={`app ${ themeAnim ? 'app__anim' : ''}`}>
+        <div className='app__back'>
+          <Background />
+        </div>
+        <div className='app__content'>
+          <Header />
+          <Routes />
+        </div>
+        <div className='app__swicth'>
+        <Switcher onClick={SwitcherTheme}
             theme={theme === 'dark' ? true : false}/>
-          </div>
-      </CSSTransition>
-      </TransitionGroup>
-    </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 

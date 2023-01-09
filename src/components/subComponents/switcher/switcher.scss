@@ -1,6 +1,9 @@
 @import '../../../style/variables.scss';
 
 .switch{
+    position: absolute;
+    z-index: 4;
+    bottom: 5%;
     width: 85px;
     height: 40px;
     border-radius: 100px;
