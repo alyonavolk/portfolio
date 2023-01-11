@@ -7,6 +7,9 @@ $text-white-th: #676767;
 
 $bg-main: var(--bg-main);
 $bg: var(--bg);
+$main-text: var(--main-text);
+$sub-text: var(--sub-text);
+$grey-text: var(--grey-text);
 
 /*text*/
 %h2 {
@@ -42,6 +45,12 @@ $bg: var(--bg);
     line-height: 33px;
 }
 
+%pageSkill{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+}
+
 @mixin poly($left, $time) {
     height: 100%;
     position: absolute;
@@ -66,26 +75,3 @@ $bg: var(--bg);
         transform: translate(0);
     }
 }
-
-
-// $light: false !default;
-
-// @if $light {
-//     $bg-main: $white-bg;
-//     $bg: $beige-bg;
-// }
-// @mixin theme($light) {
-//     @if $light {
-//         $bg-main: $white-bg;
-//         $bg: $beige-bg;
-//     }
-// }
-// @mixin theme($dark:true) {
-//     @if $dark {
-//         $bg-main: $dark-black-bg;
-//         $bg: $dark-grey-bg;
-//     } @else {
-//         $bg-main: $white-bg;
-//         $bg: $beige-bg;
-//     }
-// }

@@ -1,12 +1,21 @@
 :root{
     --bg-main--dark: #1F1F1F; /*dark-black-bg*/
     --bg--dark: #171717; /*dark-grey-bg*/
+    --main-text--dark: #FFFFFF;
+    --sub-text--dark: #E8E8E8;
+    --grey-text--dark: #C4C4C4;
 
     --bg-main--light: #E8E8E8; /*white-bg*/
     --bg--light: #FFFFFF; /*beige-bg*/
+    --main-text--light: #171717;
+    --sub-text--light: #1F1F1F;
+    --grey-text--light: #676767;
 
     --bg-main: var(--bg-main--dark);
     --bg: var(--bg--dark);
+    --main-text: var(--main-text--dark);
+    --sub-text: var(--sub-text--dark);
+    --grey-text: var(--grey-text--dark);
 }
 
 /* :root, [data-theme="default"]{

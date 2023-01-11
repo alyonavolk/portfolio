@@ -6,29 +6,28 @@ import Switcher from '../subComponents/switcher/switcher';
 import Routes from '../Routes/Routes';
 import Header from '../subComponents/header/header';
 
-/*анимацию попробовать заебашить с помощью reactTransitionGroup */
 
 function App() {
   const [theme, setTheme] = useState('dark');
   const [themeAnim, setThemeAnim] = useState(false);
 
   useEffect(() => {
-    const bgMain = `var(--bg-main--${theme})`;
-    const bg = `var(--bg--${theme})`;
-
     setTimeout(() => {
-    document.body.style.setProperty('--bg-main', bgMain);
-    document.body.style.setProperty('--bg', bg);
+    document.body.style.setProperty('--bg-main', `var(--bg-main--${theme})`);
+    document.body.style.setProperty('--bg', `var(--bg--${theme})`);
+    document.body.style.setProperty('--main-text', `var(--main-text--${theme})`);
+    document.body.style.setProperty('--sub-text', `var(--sub-text--${theme})`);
+    document.body.style.setProperty('--grey-text', `var(--grey-text--${theme})`);
     }, 350);
     
     if (theme === 'dark') {
       document.body.style.background = 'linear-gradient(to right, #171717 50%, #1F1F1F 50%)';
-      document.body.style.transition = 'background 400ms linear';
+      document.body.style.transition = 'background 800ms linear';
     } else {
       document.body.style.background = 'linear-gradient(to right, #FFFFFF 50%, #E8E8E8 50%)';
-      document.body.style.transition = 'background 400ms linear';
+      document.body.style.transition = 'background 800ms linear';
     }
-    setTimeout(() => setThemeAnim(false), 400);
+    setTimeout(() => setThemeAnim(false), 350);
   }, [theme, themeAnim])
 
   const SwitcherTheme = () => {

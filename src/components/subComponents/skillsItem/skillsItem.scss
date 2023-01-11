@@ -1,0 +1,9 @@
+@import '../../../style/variables.scss';
+
+.skills__item{
+    display: flex;
+    .item__descr{
+        @extend %pageSkill;
+        color: $sub-text;
+    }
+}

@@ -1,17 +1,16 @@
 @import '../../style/variables.scss';
 
 .main{
-    margin: 0 140px;
-    max-width: 600px;
-    max-height: 300px;
+    display: flex;
+    position: relative;
     &__content{
-
+        padding: 0 170px;
     }
     &__title{
         font-weight: 700;
         font-size: 48px;
         line-height: 62px;
-        color: $white-bg;
+        color: $main-text;
         margin-bottom: 15px;
     }
     &__descr{

@@ -12,17 +12,17 @@
         font-weight: 700;
         font-size: 36px;
         line-height: 47px;
-        color: $white-bg;
+        color: $main-text;
     }
     &__links{
         display: flex;
         gap: 40px;
         @extend %link;
-        color: $white-bg;
+        color: $main-text;
     }
     &__link{
         &_active, :hover{
-            color: $beige-bg;
+            color: $sub-text;
         }
     }
 }

@@ -1,0 +1,29 @@
+@import '../../style/variables.scss';
+
+.skills{
+    &__title{
+        text-align: center;
+        @extend %h2;
+        color: $main-text;
+        span {
+            color: $sub-text;
+        }
+        padding-bottom: 40px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    &__descr{
+        text-align: center;
+        max-width: 500px;
+        @extend %mainText;
+        color: $sub-text;
+    }
+}
