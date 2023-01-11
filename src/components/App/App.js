@@ -22,11 +22,11 @@ function App() {
     }, 350);
     
     if (theme === 'dark') {
-      document.body.style.transition = 'background 400ms linear';
       document.body.style.background = 'linear-gradient(to right, #171717 50%, #1F1F1F 50%)';
-    } else {
       document.body.style.transition = 'background 400ms linear';
+    } else {
       document.body.style.background = 'linear-gradient(to right, #FFFFFF 50%, #E8E8E8 50%)';
+      document.body.style.transition = 'background 400ms linear';
     }
     setTimeout(() => setThemeAnim(false), 400);
   }, [theme, themeAnim])
@@ -46,10 +46,8 @@ function App() {
           <Header />
           <Routes />
         </div>
-        <div className='app__swicth'>
         <Switcher onClick={SwitcherTheme}
             theme={theme === 'dark' ? true : false}/>
-        </div>
       </div>
     </Router>
   );

@@ -2,13 +2,14 @@
 
 .switch{
     position: absolute;
+    max-width: 300px;
     z-index: 4;
-    bottom: 5%;
+    bottom: 8%;
+    left: 6%;
     width: 85px;
     height: 40px;
     border-radius: 100px;
     display: flex;
-    position: relative;
     transition: all 350ms ease-in;
     &_dark{
         border: 1px solid #1F1F1F;
