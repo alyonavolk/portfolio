@@ -1,12 +1,13 @@
 @import '../../style/variables.scss';
 
 .skills{
+    padding: 0 50px;
     &__title{
         text-align: center;
         @extend %h2;
         color: $main-text;
         span {
-            color: $sub-text;
+            color: $grey-text;
         }
         padding-bottom: 40px;
     }
@@ -16,8 +17,10 @@
         flex-wrap: wrap;
     }
     &__items{
+        max-width: 800px;
         display: flex;
         flex-wrap: wrap;
+        gap: 4vw 30%;
 
     }
     &__descr{

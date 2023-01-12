@@ -9,6 +9,9 @@
         @extend %h2;
         color: $main-text;
         padding-bottom: 10px;
+        span {
+            color: $grey-text;
+        }
         &_grey{
             text-align: center;
             font-weight: 500;
@@ -48,5 +51,11 @@
     &__btn{
         background-color: inherit;
         border: none;
+        cursor: pointer;
+        font-size: 80px;
+        color: $img-color;
+        &:hover{
+            color: $grey-text;
+        }
     }
 }

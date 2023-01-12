@@ -2,8 +2,20 @@
 
 .skills__item{
     display: flex;
+    gap: 20px;
+    &:nth-child(3), &:nth-child(4), &:nth-child(7), &:nth-child(8) {
+        margin-left: 100px;
+    }
     .item__descr{
         @extend %pageSkill;
         color: $sub-text;
+        color: $grey-text;
+        &:hover{
+            color: $img-color;
+            cursor:none;
+        }
+    }
+    img {
+        max-width: 40px;
     }
 }

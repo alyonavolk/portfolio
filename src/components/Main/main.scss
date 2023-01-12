@@ -1,11 +1,7 @@
 @import '../../style/variables.scss';
 
 .main{
-    display: flex;
-    position: relative;
-    &__content{
-        padding: 0 170px;
-    }
+    padding: 0 170px;
     &__title{
         font-weight: 700;
         font-size: 48px;
@@ -18,5 +14,21 @@
         font-size: 22px;
         line-height: 29px;
         color: #828282;
+    }
+    &__links{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    &__btn{
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+        font-size: 45px;
+        color: $img-color;
+        &:hover{
+            color: $grey-text;
+        }
     }
 }

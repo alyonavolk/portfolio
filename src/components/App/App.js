@@ -6,33 +6,37 @@ import Switcher from '../subComponents/switcher/switcher';
 import Routes from '../Routes/Routes';
 import Header from '../subComponents/header/header';
 
+import {changBg, changVar} from '../../functions/theme';
+
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState();
   const [themeAnim, setThemeAnim] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-    document.body.style.setProperty('--bg-main', `var(--bg-main--${theme})`);
-    document.body.style.setProperty('--bg', `var(--bg--${theme})`);
-    document.body.style.setProperty('--main-text', `var(--main-text--${theme})`);
-    document.body.style.setProperty('--sub-text', `var(--sub-text--${theme})`);
-    document.body.style.setProperty('--grey-text', `var(--grey-text--${theme})`);
-    }, 350);
     
-    if (theme === 'dark') {
-      document.body.style.background = 'linear-gradient(to right, #171717 50%, #1F1F1F 50%)';
-      document.body.style.transition = 'background 800ms linear';
+    const localTheme = window.localStorage.getItem('theme');
+    if (localTheme === 'light') {
+      changVar(theme);
     } else {
-      document.body.style.background = 'linear-gradient(to right, #FFFFFF 50%, #E8E8E8 50%)';
-      document.body.style.transition = 'background 800ms linear';
+      setTimeout(() => {
+        changVar(theme);
+      }, 350);
     }
+    localTheme ? setTheme(localTheme) : setMode('dark');
+    
+    changBg(theme);
     setTimeout(() => setThemeAnim(false), 350);
   }, [theme, themeAnim])
 
+  const setMode = mode => {
+    window.localStorage.setItem('theme', mode)
+    setTheme(mode)
+  };
+
   const SwitcherTheme = () => {
     setThemeAnim(true);
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setMode(theme === 'dark' ? 'light' : 'dark');
   }
 
   return (

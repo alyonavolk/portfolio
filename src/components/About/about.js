@@ -1,9 +1,10 @@
 import './about.scss';
+import '../../style/iconStyle.scss';
 
 const About = () => {
     return (
         <div className='about'>
-            <h2 className='about__title'>Обо мне</h2>
+            <h2 className='about__title'>Обо <span>мне</span></h2>
             <h3 className='about__title_grey'>Frontend Developer</h3>
             <p className='about__descr'>
                 My name is Matheus Amauri de Jesus Campos 
@@ -12,9 +13,8 @@ const About = () => {
             </p>
             <ul className='about__links'>
                 <li className='about__link'>
-                    <button className='link__btn' 
+                    <button className='link__btn icon-Git' 
                     onClick={() => window.location.href = 'https://github.com/alyonavolk'}  target='_blank'>
-                        <img src='' alt='dsd' />
                     </button>
                    <p className='link__title'>
                         GitHub
@@ -24,9 +24,8 @@ const About = () => {
                    </p>
                 </li>
                 <li className='about__link'>
-                    <button className='link__btn' 
+                    <button className='link__btn icon-telegram' 
                     onClick={() => window.location.href = 'https://t.me/die_cookies'}  target='_blank'>
-                        <img src='' alt='dsd' />
                     </button>
                    <p className='link__title'>
                         Telegram
@@ -36,9 +35,8 @@ const About = () => {
                    </p>
                 </li>
                 <li className='about__link'>
-                    <button className='link__btn' 
+                    <button className='link__btn icon-vk' 
                     onClick={() => window.location.href = 'https://vk.com/al.volkova20'}  target='_blank'>
-                        <img src='' alt='dsd' />
                     </button>
                    <p className='link__title'>
                         ВКонтаке
@@ -48,9 +46,8 @@ const About = () => {
                    </p>
                 </li>
                 <li className='about__link'>
-                    <button className='link__btn' 
+                    <button className='link__btn icon-ds' 
                     onClick={() => window.location.href = 'https://discordapp.com/users/717265325967540284'}  target='_blank'>
-                        <img src='' alt='dsd' />
                     </button>
                    <p className='link__title'>
                         Discord
