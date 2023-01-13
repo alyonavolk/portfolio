@@ -2,6 +2,7 @@ import './about.scss';
 import '../../style/iconStyle.scss';
 
 const About = () => {
+
     return (
         <div className='about'>
             <h2 className='about__title'>Обо <span>мне</span></h2>
@@ -14,8 +15,7 @@ const About = () => {
             <ul className='about__links'>
                 <li className='about__link'>
                     <button className='link__btn icon-Git' 
-                    onClick={() => window.location.href = 'https://github.com/alyonavolk'}  target='_blank'>
-                    </button>
+                    onClick={() => window.location.href = 'https://github.com/alyonavolk'} />
                    <p className='link__title'>
                         GitHub
                    </p>
@@ -25,8 +25,7 @@ const About = () => {
                 </li>
                 <li className='about__link'>
                     <button className='link__btn icon-telegram' 
-                    onClick={() => window.location.href = 'https://t.me/die_cookies'}  target='_blank'>
-                    </button>
+                    onClick={() => window.location.href = 'https://t.me/die_cookies'} />
                    <p className='link__title'>
                         Telegram
                    </p>
@@ -36,8 +35,7 @@ const About = () => {
                 </li>
                 <li className='about__link'>
                     <button className='link__btn icon-vk' 
-                    onClick={() => window.location.href = 'https://vk.com/al.volkova20'}  target='_blank'>
-                    </button>
+                    onClick={() => window.location.href = 'https://vk.com/al.volkova20'} />
                    <p className='link__title'>
                         ВКонтаке
                    </p>
@@ -47,8 +45,7 @@ const About = () => {
                 </li>
                 <li className='about__link'>
                     <button className='link__btn icon-ds' 
-                    onClick={() => window.location.href = 'https://discordapp.com/users/717265325967540284'}  target='_blank'>
-                    </button>
+                    onClick={() => window.location.href = 'https://discordapp.com/users/717265325967540284'} />
                    <p className='link__title'>
                         Discord
                    </p>

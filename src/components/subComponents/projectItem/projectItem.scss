@@ -1,0 +1,47 @@
+@import '../../../style/variables.scss';
+
+.projectItem{
+    position: relative;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+
+    max-width: 340px;
+    max-height: 190px;
+    &:hover{
+        .projectItem__name{
+            opacity: 1;
+        }
+    }
+    &__name{
+        transition: opacity 0.6s linear;
+        opacity: 0;
+        top: 0%;
+        @extend %pageSkill;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        border-radius: 19px;
+        width: 340px;
+        &_dark{
+            background: #2D2D2D;
+            color: #BBBBBB;
+        }
+        &_light{
+            background: #BBBBBB;
+            color: #2D2D2D;
+        }
+        &_grey{
+            background: #838383;
+            color: #2D2D2D;
+        }
+        &_small{
+            height: 190px;
+        }
+        &_high{
+            height: 250px;
+        }
+    }
+}

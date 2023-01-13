@@ -6,6 +6,7 @@ import About from '../About/about';
 import Skills from '../Skills/skills';
 
 import {CSSTransition, TransitionGroup } from 'react-transition-group';
+import Projects from '../Projects/projects';
 
 const Routes = () => {
     const lock = useLocation();
@@ -23,20 +24,21 @@ const Routes = () => {
                   </div>
                 </Route>
                 <Route exact path='/about'>
-                  <div className='content__about'>
+                  <div className='content__block_middle'>
                     <PageName>Обо мне</PageName>
                     <About />
                   </div>
                 </Route>
                 <Route exact path='/skills'>
-                  <div className='content__about'>
+                  <div className='content__block_middle'>
                     <PageName>Skills</PageName>
                     <Skills />
                   </div>
                 </Route>
                 <Route exact path='/project'>
-                  <div className='content__about'>
+                  <div className='content__block_top'>
                     <PageName>Проекты</PageName>
+                    <Projects />
                   </div>
                 </Route>
                 <Route exact path='/contacts'>

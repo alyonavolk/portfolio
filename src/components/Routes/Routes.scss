@@ -1,0 +1,45 @@
+@import '../../style/variables.scss';
+
+.content{
+    &__main{
+        margin-top: 10%;
+    }
+    &__block{
+        &_top{
+            margin-top: 10px;
+        }
+        &_middle{
+            margin-top: 50px;
+        }
+    }
+}
+
+
+
+.fade-appear,
+.fade-enter {
+    margin-top: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    margin-top: 1%;
+    opacity: 1;
+    transition: margin-top 350ms linear;
+    transition: opacity 450ms linear 250ms;
+}
+.fade-exit {
+    transition: margin-top 500ms linear;
+    margin-top: 1%;
+    opacity: 1;
+}
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    margin-top: 100%;
+    transition: margin-top 500ms linear;
+    transition: opacity 150ms linear;
+}
+.fade-enter-done{
+    transition: margin-top 500ms ease-out;
+}

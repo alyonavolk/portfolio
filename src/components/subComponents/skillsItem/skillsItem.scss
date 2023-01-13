@@ -7,6 +7,7 @@
         margin-left: 100px;
     }
     .item__descr{
+        transition: color 0.4s ease 0s;
         @extend %pageSkill;
         color: $sub-text;
         color: $grey-text;

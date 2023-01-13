@@ -29,6 +29,7 @@
     }
     &__links{
         display: flex;
+        flex-wrap: wrap;
         gap: 115px;
     }
     &__link{
@@ -49,6 +50,7 @@
         color: $main-text;
     }
     &__btn{
+        transition: color 0.4s ease 0s;
         background-color: inherit;
         border: none;
         cursor: pointer;
