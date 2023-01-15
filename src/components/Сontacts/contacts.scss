@@ -33,6 +33,23 @@
             color: $sub-text;
         }
     }
+    &__modal{
+        position: absolute;
+        z-index: 1;
+        width: 1000px;
+        height: 500px;
+        margin: auto;
+        background-color: rgba(45, 45, 45, 0.40);
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top:60%;
+        left:50%;
+        transform:translate(-50%, -40%);
+    }
 }
 
 .form{
@@ -46,6 +63,9 @@
         li {
             height: 70px;
         }
+    }
+    &__mess{
+        height: 150px;
     }
     &__textarea{
         transition: background-color 0.3s linear;
@@ -73,4 +93,19 @@
         padding: 5px 0;
         color: $grey-text;
     }
+}
+
+.alert-enter {
+  opacity: 0;
+}
+.alert-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
 }

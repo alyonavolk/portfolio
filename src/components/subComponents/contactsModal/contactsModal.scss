@@ -1,0 +1,31 @@
+@import '../../../style/variables.scss';
+
+.modal{
+    max-width: 400px;
+    max-height: 150px;
+    display: flex;
+    padding: 30px 10px;
+    background-color: $bg-main;
+    gap: 10px;
+    border-radius: 10px;
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @extend %smallText;
+        color: $main-text;
+        text-align: center;
+    }
+    &_close{
+        background-color: inherit;
+        border: none;
+        transition: color 0.3s linear;
+        color: $main-text;
+        cursor: pointer;
+        @extend %smallText;
+        padding: 10px;
+        &:hover{
+            color: $grey-text;
+        }
+    }
+}
