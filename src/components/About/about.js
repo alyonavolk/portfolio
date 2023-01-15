@@ -45,7 +45,7 @@ const About = () => {
                 </li>
                 <li className='about__link'>
                     <button className='link__btn icon-ds' 
-                    onClick={() => window.location.href = 'https://discordapp.com/users/717265325967540284'} />
+                    onClick={() => window.location.href = 'https://discordapp.com/users/751402235212070942'} />
                    <p className='link__title'>
                         Discord
                    </p>

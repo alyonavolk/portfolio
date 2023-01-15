@@ -25,7 +25,7 @@ const Main = () => {
                 </li>
                 <li className='main__link'>
                     <button className='main__btn icon-ds' 
-                    onClick={() => window.location.href = 'https://discordapp.com/users/717265325967540284'}  target='_blank'>
+                    onClick={() => window.location.href = 'https://discordapp.com/users/751402235212070942'}  target='_blank'>
                     </button>
                 </li>
             </ul>

@@ -7,6 +7,7 @@ import Skills from '../Skills/skills';
 
 import {CSSTransition, TransitionGroup } from 'react-transition-group';
 import Projects from '../Projects/projects';
+import Contacts from '../Сontacts/contacts';
 
 const Routes = () => {
     const lock = useLocation();
@@ -42,8 +43,9 @@ const Routes = () => {
                   </div>
                 </Route>
                 <Route exact path='/contacts'>
-                  <div className='content__about'>
+                  <div className='content__block_middle'>
                     <PageName>Контакты</PageName>
+                    <Contacts />
                   </div>
                 </Route>
               </Switch>
