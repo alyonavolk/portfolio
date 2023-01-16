@@ -1,12 +1,12 @@
 [
-    {"id": 1, "img": "cell.svg", "name": "React"}, 
-    {"id": 2, "img": "cell.svg", "name": "HTML"},
-    {"id": 3, "img": "cellIn.svg", "name": "CSS"}, 
-    {"id": 4, "img": "cellIn.svg", "name": "SASS"},
-    {"id": 5, "img": "cell.svg", "name": "JavaScript"},
-    {"id": 6, "img": "cellIn.svg", "name": "TypeScript"},
-    {"id": 7, "img": "cellIn.svg", "name": "Redux"}, 
-    {"id": 8, "img": "cell.svg", "name": "MySQL"}, 
-    {"id": 9, "img": "cell.svg", "name": "Figma"}, 
-    {"id": 10, "img": "cellIn.svg", "name": "Tilda"}
+    {"id": "1", "img": "cell.svg", "name": "React"}, 
+    {"id": "2", "img": "cellIn.svg", "name": "HTML"},
+    {"id": "3", "img": "cellIn.svg", "name": "CSS"}, 
+    {"id": "4", "img": "cell.svg", "name": "SASS"},
+    {"id": "5", "img": "cell.svg", "name": "JavaScript"},
+    {"id": "6", "img": "cellIn.svg", "name": "TypeScript"},
+    {"id": "7", "img": "cellIn.svg", "name": "Redux"}, 
+    {"id": "8", "img": "cell.svg", "name": "MySQL"}, 
+    {"id": "9", "img": "cell.svg", "name": "Figma"}, 
+    {"id": "10", "img": "cellIn.svg", "name": "Tilda"}
 ]

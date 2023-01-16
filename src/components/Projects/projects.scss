@@ -25,4 +25,22 @@
             align-self: baseline;
         }
     }
+    @media (max-width: 568px) {
+        &__items{
+            gap: 30px;
+        }
+        &__descr{
+            max-width: 400px;
+            margin: 3% 10% 5% 30%;
+        }
+    }
+    @media (max-width: 375px) {
+        &__descr{
+            max-width: 400px;
+            margin: 3% 10% 5% 20%;
+        }
+        &__items{
+            margin: 0;
+        }
+    }
 }

@@ -12,6 +12,26 @@
             margin-top: 50px;
         }
     }
+    @media (max-width: 568px) {
+        &__main{
+            margin-top: 15%;
+        }
+        &__block{
+            &_top{
+                margin-top: 80px;
+                margin-bottom: 30px;
+            }
+            &_middle{
+                margin-top: 80px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    @media (max-width: 425px) {
+        &__main{
+            margin-top: 30%;
+        }
+    }
 }
 
 
@@ -26,7 +46,6 @@
 .fade-enter.fade-enter-active {
     margin-top: 1%;
     opacity: 1;
-    transition: margin-top 350ms linear;
     transition: opacity 450ms linear 250ms;
 }
 .fade-exit {

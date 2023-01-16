@@ -44,4 +44,20 @@
             height: 250px;
         }
     }
+    @media (max-width: 375px) {
+        max-width: 300px;
+        max-height: 170px;
+        &__name{
+            width: 300px;
+            &_small{
+                height: 170px;
+            }
+            &_high{
+                height: 230px;
+            }
+        }
+        img {
+            max-width: 300px;
+        }
+    }
 }

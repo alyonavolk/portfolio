@@ -13,14 +13,14 @@ const Skills = () => {
                 Hard <span>Skills</span>
             </h2>
             <div className='skills__content'>
-                <ul className='skills__items'>
-                    {skill.map((val) => <SkillsItem id={val.id} img={val.img} title={val.name} />)}
-                </ul>
                 <p className='skills__descr'>
                     My name is Matheus Amauri de Jesus Campos 
                     My name is Matheus Amauri de Jesus Campos 
                     My name is Matheus Amauri de Jesus Campos 
                 </p>
+                <ul className='skills__items'>
+                    {skill.map((val) => <SkillsItem id={val.id} img={val.img} title={val.name} />)}
+                </ul>
             </div>
         </div>
     );

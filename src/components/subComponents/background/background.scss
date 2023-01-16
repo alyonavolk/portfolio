@@ -2,18 +2,8 @@
 
 .polygon{
     height: 100%;
-
-    // @for $i from 1 through 8 {
-    //     &_#{$i}{
-    //         @include poly(43vw + 2vw);
-    //         background: $dark-grey-bg;
-    //         &:hover{
-    //             transform: translate(-3vw);
-    //         }
-    //     }
-    //   }
     &_1{
-        @include poly(43vw, 10ms);
+        @include poly(42vw, 10ms, 350px);
         background: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
         // &:hover{
@@ -21,55 +11,132 @@
         // }
     }
     &_2{
-        @include poly(44vw, 150ms);
+        @include poly(43.4vw, 150ms, 350px);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
     }
     &_3{
-        @include poly(48vw, 200ms);
+        @include poly(48vw, 200ms, 350px);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
     }
     &_4{
-        @include poly(50vw, 300ms);
+        @include poly(50vw, 300ms, 350px);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
     }
     &_5{
-        @include poly(53vw, 300ms);
+        @include poly(53vw, 300ms, 350px);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
     }
     &_6{
-        @include poly(57vw, 500ms);
+        @include poly(57vw, 500ms, 350px);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
     }
     &_7{
-        @include poly(59vw, 600ms);
+        @include poly(59vw, 600ms, 350px);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
     }
     &_8{
-        @include poly(63vw, 700ms);
+        @include poly(63vw, 700ms, 350px);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
     }
     
     &_9{
-        @include poly(65vw, 800ms);
+        @include poly(65vw, 800ms, 350px);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
     }
     &_10{
-        @include poly(70vw, 900ms);
+        @include poly(70vw, 900ms, 350px);
         background-color: $bg-main;
         clip-path:polygon(49% 0, 78% 0%, 96% 27%, 100% 68%, 77% 100%, 50% 100%, 21% 100%, 7% 66%, 3% 23%, 25% 0%);
     }
     &_11{
-        @include poly(71.5vw, 1000ms);
+        @include poly(71.5vw, 1000ms, 350px);
         background-color: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
     }
+    @media (max-width: 1200px) {
+        &_11, &_10 {
+            display: none;
+        }
+    }
+    @media (max-width: 768px) {
+        &_11, &_10, &_9, &_8 {
+            display: none;
+        }
+        &_1{
+            @include poly(42vw, 10ms, 300px);
+        }
+        &_2{
+            @include poly(43.4vw, 150ms, 300px);
+        }
+        &_3{
+            @include poly(48vw, 200ms, 300px);
+        }
+        &_4{
+            @include poly(50vw, 300ms, 300px);
+        }
+        &_5{
+            @include poly(53vw, 300ms, 300px);
+        }
+        &_6 {
+            @include poly(57vw, 500ms, 300px);
+        }
+        &_7 {
+            @include poly(59vw, 600ms, 300px);
+        }
+    }
+    @media (max-width: 568px) {
+        &_7, &_6 {
+            display: none;
+        }
+        &_1{
+            @include poly(32vw, 10ms, 200px);
+        }
+        &_2{
+            @include poly(37vw, 150ms, 200px);
+        }
+        &_3{
+            @include poly(45vw, 200ms, 200px);
+        }
+        &_4{
+            @include poly(53vw, 300ms, 200px);
+        }
+        &_5{
+            @include poly(64vw, 300ms, 200px);
+        }
+    }
+    @media (max-width: 425px) {
+        &_5, &_4 {
+            display: none;
+        }
+    }
+    @media (max-width: 375px) {
+        &_1{
+            @include poly(37vw, 10ms, 150px);
+        }
+        &_2{
+            @include poly(45vw, 150ms, 150px);
+        }
+        &_3{
+            @include poly(58vw, 200ms, 150px);
+        }
+    }
+    @media (max-width: 320px) {
+        &_1{
+            @include poly(37vw, 10ms, 130px);
+        }
+        &_2{
+            @include poly(45vw, 150ms, 130px);
+        }
+        &_3{
+            @include poly(58vw, 200ms, 130px);
+        }
+    }
 }
-

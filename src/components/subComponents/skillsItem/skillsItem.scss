@@ -19,4 +19,22 @@
     img {
         max-width: 40px;
     }
+    @media (max-width: 568px) {
+        img {
+            max-width: 30px;
+        }
+        &:nth-child(3), &:nth-child(4), &:nth-child(7), &:nth-child(8) {
+            margin-left: 50px;
+        }
+    }
+    @media (max-width: 425px) {
+        &:nth-child(3), &:nth-child(4), &:nth-child(7), &:nth-child(8) {
+            margin-left: 20px;
+        }
+    }
+    @media (max-width: 375px) {
+        .header{
+            padding: 30px 40px 0;
+        }
+    }
 }

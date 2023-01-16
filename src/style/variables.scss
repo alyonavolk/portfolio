@@ -18,6 +18,11 @@ $grey-text: var(--grey-text);
     font-weight: 700;
     font-size: 56px;
     line-height: 73px;
+    @media (max-width: 768px) {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 65px;
+    }
 }
 
 /*шапка и подписи к соц сетям*/
@@ -32,6 +37,10 @@ $grey-text: var(--grey-text);
     font-weight: 500;
     font-size: 30px;
     line-height: 39px;
+    @media (max-width: 768px) {
+        font-size: 26px;
+        line-height: 34px;
+    }
 }
 
 /*текст на странице проекты*/
@@ -51,6 +60,11 @@ $grey-text: var(--grey-text);
     font-weight: 900;
     font-size: 36px;
     line-height: 42px;
+    @media (max-width: 568px) {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 32px;
+    }
 }
 
 %inputText{
@@ -59,11 +73,11 @@ $grey-text: var(--grey-text);
     line-height: 26px;
 }
 
-@mixin poly($left, $time) {
+@mixin poly($left, $time, $wd) {
     height: 100%;
     position: absolute;
     left: $left;
-    width: 350px;
+    width: $wd;
     top: 0;
     transition: transform 0.5s ease-in;
     animation-name: animBg;

@@ -26,4 +26,12 @@
         font-size: 21.9512px;
         line-height: 30px;
     }
+    @media (max-width: 568px) {
+        transform: rotate(180deg);
+        top: 100px;
+        left: 5%;
+        &__title{
+            transform: rotate(-180deg);
+        }
+    }
 }

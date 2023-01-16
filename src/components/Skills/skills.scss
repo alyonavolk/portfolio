@@ -13,6 +13,7 @@
     }
     &__content{
         display: flex;
+        flex-direction: row-reverse;
         justify-content: space-around;
         flex-wrap: wrap;
     }
@@ -21,12 +22,37 @@
         display: flex;
         flex-wrap: wrap;
         gap: 4vw 30%;
-
     }
     &__descr{
         text-align: center;
         max-width: 500px;
         @extend %mainText;
         color: $sub-text;
+    }
+    @media (max-width: 768px) {
+        &__items{
+            gap: 50px;
+        }
+        &__title{
+            padding-bottom: 20px;
+        }
+        &__descr{
+            padding-bottom: 20px;
+        }
+    }
+    @media (max-width: 568px) {
+        &__descr{
+            padding: 0 0 60px;  
+        }
+    }
+    @media (max-width: 425px) {
+        .header{
+            padding: 30px 60px 0;
+        }
+    }
+    @media (max-width: 375px) {
+        .header{
+            padding: 30px 40px 0;
+        }
     }
 }
