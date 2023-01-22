@@ -23,6 +23,10 @@ $grey-text: var(--grey-text);
         font-size: 48px;
         line-height: 65px;
     }
+    color: $main-text;
+    span {
+        color: $grey-text;
+    }
 }
 
 /*шапка и подписи к соц сетям*/
@@ -71,6 +75,17 @@ $grey-text: var(--grey-text);
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
+}
+
+%socBtn {
+    transition: color 0.4s ease 0s;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    color: $img-color;
+    &:hover{
+        color: $grey-text;
+    }
 }
 
 @mixin poly($left, $time, $wd) {

@@ -16,7 +16,7 @@ const Routes = () => {
         <TransitionGroup>
         <CSSTransition timeout = {800}
               classNames = 'fade'
-              key={lock.key}>
+              key={lock.pathname}>
               <Switch location={lock}>
                 <Route exact path='/'>
                   <div className='content__main'>

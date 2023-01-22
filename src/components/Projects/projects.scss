@@ -5,7 +5,7 @@
         @extend %h2;
         color: $main-text;
         padding-bottom: 10px;
-        text-align: center  ;
+        text-align: center;
     }
     &__descr{
         @extend %smallText;

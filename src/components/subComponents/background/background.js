@@ -1,19 +1,10 @@
 import './background.scss';
 
 const Background = () => {
+    const bg = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     return (
         <div className='polygon'>
-            <div className='polygon_11'>s</div>
-            <div className='polygon_10'>s</div>
-            <div className='polygon_9'>s</div>
-            <div className='polygon_8'>s</div>
-            <div className='polygon_7'>s</div>
-            <div className='polygon_6'>s</div>
-            <div className='polygon_5'>s</div>
-            <div className='polygon_4'>s</div>
-            <div className='polygon_3'>s</div>
-            <div className='polygon_2'>s</div>
-            <div className='polygon_1'>f</div>
+            {bg.map(() => <div>&nbsp;</div>)}
         </div>
     );
 };

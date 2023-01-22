@@ -1,14 +1,11 @@
 @import '../../style/variables.scss';
 
 .skills{
-    padding: 0 50px;
+    max-width: 90%;
+    margin: 0 auto;
     &__title{
         text-align: center;
         @extend %h2;
-        color: $main-text;
-        span {
-            color: $grey-text;
-        }
         padding-bottom: 40px;
     }
     &__content{
@@ -43,16 +40,6 @@
     @media (max-width: 568px) {
         &__descr{
             padding: 0 0 60px;  
-        }
-    }
-    @media (max-width: 425px) {
-        .header{
-            padding: 30px 60px 0;
-        }
-    }
-    @media (max-width: 375px) {
-        .header{
-            padding: 30px 40px 0;
         }
     }
 }

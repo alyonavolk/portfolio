@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { HashRouter as Router} from 'react-router-dom';
 import './App.scss';
 import Background from '../subComponents/background/background';
 import Switcher from '../subComponents/switcher/switcher';

@@ -1,7 +1,7 @@
 @import '../../style/variables.scss';
 
 .main{
-    padding: 0 170px;
+    padding: 0 10%;
     &__title{
         font-weight: 700;
         font-size: 48px;
@@ -22,15 +22,8 @@
         margin-top: 30px;
     }
     &__btn{
-        transition: color 0.4s ease 0s;
-        background-color: inherit;
-        border: none;
-        cursor: pointer;
+        @extend %socBtn;
         font-size: 45px;
-        color: $img-color;
-        &:hover{
-            color: $grey-text;
-        }
     }
     @media (max-width: 568px) {
         padding: 0 100px;

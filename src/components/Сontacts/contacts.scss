@@ -4,11 +4,7 @@
     &__title{
         text-align: center;
         @extend %h2;
-        color: $main-text;
         padding-bottom: 10px;
-        span {
-            color: $grey-text;
-        }
         &_grey{
             text-align: center;
             font-weight: 500;
@@ -96,7 +92,8 @@
 
 .form{
     margin: 3% auto 0;
-    max-width: 900px;
+    max-width: 80%;
+    width: 900px;
     &__input{
         display: flex;
         flex-wrap: wrap;
@@ -135,32 +132,16 @@
         padding: 5px 0;
         color: $grey-text;
     }
-    @media (max-width: 768px) {
-        margin: 5% auto 0;
-        max-width: 500px;
-        &__mess{
-            height: 170px;
-        }
+    @media (max-width: 1024px) {
         &__input{
             justify-content: center;
         }
     }
-    @media (max-width: 568px) {
+    @media (max-width: 768px) {
         margin: 5% auto 0;
-        max-width: 400px;
         &__mess{
             height: 170px;
         }
-    }
-    @media (max-width: 425px) {
-        margin: 5% auto 0;
-        max-width: 380px;
-    }
-    @media (max-width: 375px) {
-        max-width: 350px;
-    }
-    @media (max-width: 325px) {
-        max-width: 280px;
     }
 }
 
