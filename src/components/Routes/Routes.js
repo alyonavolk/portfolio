@@ -9,9 +9,17 @@ import {CSSTransition, TransitionGroup } from 'react-transition-group';
 import Projects from '../Projects/projects';
 import Contacts from '../Сontacts/contacts';
 
-const Routes = () => {
+const Routes = (menu) => {
     const lock = useLocation();
+    let menuLock = '/';
 
+    menu = () => {
+      if (menuLock !== lock) {
+        return true
+      } else {
+        return false
+      }
+    }
     return (
         <TransitionGroup>
         <CSSTransition timeout = {800}

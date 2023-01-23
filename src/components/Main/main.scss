@@ -1,7 +1,7 @@
 @import '../../style/variables.scss';
 
 .main{
-    padding: 0 10%;
+    padding: 0 170px;
     &__title{
         font-weight: 700;
         font-size: 48px;
@@ -10,10 +10,16 @@
         margin-bottom: 15px;
     }
     &__descr{
+        max-width: 300px;
         font-weight: 500;
         font-size: 22px;
         line-height: 29px;
         color: #828282;
+        cursor: default;
+        transition: text-shadow 0.3s linear;
+        &:hover{
+            text-shadow: 2px 2px $grey-text;
+        }
     }
     &__links{
         display: flex;

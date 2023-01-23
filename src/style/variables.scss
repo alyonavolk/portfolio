@@ -78,13 +78,14 @@ $grey-text: var(--grey-text);
 }
 
 %socBtn {
-    transition: color 0.4s ease 0s;
+    transition: color 0.4s ease 0s, text-shadow 0.3s linear;
     background-color: inherit;
     border: none;
     cursor: pointer;
     color: $img-color;
     &:hover{
         color: $grey-text;
+        text-shadow: $img-color 1px 0 10px ;
     }
 }
 

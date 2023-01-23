@@ -21,8 +21,10 @@
         color: $main-text;
     }
     &__link{
+        transition: text-shadow 0.3s linear;
         &_active, &:hover{
             color: $sub-text;
+            text-shadow: $sub-text 1px 3px 8px ;
         }
     }
 }
@@ -117,12 +119,3 @@
         padding: 30px 40px 0;
     }
 }
-// @media (max-width: 564px) {
-//     .header{
-//         padding: 30px 140px 0;
-//     }
-// }
-// @media (max-width: 425px) {
-// }
-// @media (max-width: 375px) {
-// }
