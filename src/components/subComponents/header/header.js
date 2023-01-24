@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './header.scss';
 
-const Header = () => {
-    const [menu, setMenu] = useState();
+const Header = ({menu, setMenu}) => {
 
     return (
         <div className='header'>

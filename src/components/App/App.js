@@ -4,7 +4,6 @@ import './App.scss';
 import Background from '../subComponents/background/background';
 import Switcher from '../subComponents/switcher/switcher';
 import Routes from '../Routes/Routes';
-import Header from '../subComponents/header/header';
 
 import {changBg, changVar} from '../../functions/theme';
 
@@ -46,7 +45,6 @@ function App() {
           <Background />
         </div>
         <div className='app__content'>
-          <Header />
           <Routes />
         </div>
         <Switcher onClick={SwitcherTheme}

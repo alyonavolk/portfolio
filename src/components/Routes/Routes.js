@@ -1,26 +1,27 @@
+import { useState, useEffect } from 'react';
 import './Routes.scss';
 import { BrowserRouter as Route, Switch, useLocation } from 'react-router-dom';
 import Main from '../Main/main';
 import PageName from '../subComponents/pageName/pageName';
 import About from '../About/about';
 import Skills from '../Skills/skills';
+import Header from '../subComponents/header/header';
 
 import {CSSTransition, TransitionGroup } from 'react-transition-group';
 import Projects from '../Projects/projects';
 import Contacts from '../Сontacts/contacts';
 
-const Routes = (menu) => {
+const Routes = () => {
+  const [menu, setMenu] = useState();
+  
     const lock = useLocation();
-    let menuLock = '/';
-
-    menu = () => {
-      if (menuLock !== lock) {
-        return true
-      } else {
-        return false
-      }
-    }
+    useEffect(() => {
+      setMenu(false)
+    }, [lock])
+    
     return (
+      <>
+        <Header menu={menu} setMenu={setMenu} />
         <TransitionGroup>
         <CSSTransition timeout = {800}
               classNames = 'fade'
@@ -59,6 +60,7 @@ const Routes = (menu) => {
               </Switch>
         </CSSTransition>
         </TransitionGroup>
+      </>
     );
 };
 
