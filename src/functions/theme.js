@@ -8,8 +8,8 @@ export const changVar = (theme) => {
 
 export const changBg = (theme) => {
     if (theme === 'dark') {
-        document.body.style.background = 'linear-gradient(to right, #171717 50%, #1F1F1F 50%)';
+        document.body.style.backgroundColor = '#171717';
       } else {
-        document.body.style.background = 'linear-gradient(to right, #FFFFFF 50%, #E8E8E8 50%)';
+        document.body.style.backgroundColor = '#FFFFFF';
     }
 }

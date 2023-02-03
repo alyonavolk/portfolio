@@ -16,21 +16,21 @@ function App() {
     
     const localTheme = window.localStorage.getItem('theme');
     if (localTheme === 'light') {
-      changVar(theme);
+      changVar('light');
     } else {
       setTimeout(() => {
         changVar(theme);
-      }, 350);
+      }, 400);
     }
     localTheme ? setTheme(localTheme) : setMode('dark');
-    
+
     changBg(theme);
-    setTimeout(() => setThemeAnim(false), 350);
+    setTimeout(() => setThemeAnim(false), 400);
   }, [theme, themeAnim])
 
   const setMode = mode => {
-    window.localStorage.setItem('theme', mode)
-    setTheme(mode)
+    window.localStorage.setItem('theme', mode);
+    setTheme(mode);
   };
 
   const SwitcherTheme = () => {

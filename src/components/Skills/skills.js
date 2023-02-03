@@ -15,7 +15,7 @@ const Skills = () => {
                     My name is Matheus Amauri de Jesus Campos 
                 </p>
                 <ul className='skills__items'>
-                    {skill.map((val) => <SkillsItem id={val.id} img={val.img} title={val.name} />)}
+                    {skill.map((val) => <SkillsItem key={val.id} img={val.img} title={val.name} />)}
                 </ul>
             </div>
         </div>

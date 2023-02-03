@@ -7,7 +7,7 @@ const Header = ({menu, setMenu}) => {
         <div className='header'>
             <div className='header__logo'>
                 <div>
-                    <NavLink className='header__link' activeClassName='header__link_active' exact to='/'>
+                    <NavLink className='header__link' exact to='/'>
                 Volkova</NavLink>
                 </div>
             </div>

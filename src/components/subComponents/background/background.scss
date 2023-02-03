@@ -1,7 +1,10 @@
 @import '../../../style/variables.scss';
 
 .polygon{
+    background: linear-gradient(to right, var(--bg) 50%, var(--bg-main) 50%);
     height: 100%;
+    width: 100%;
+    position: absolute;
     :nth-child(odd) {
         background: $bg;
         clip-path: polygon(50% 0, 75% 0, 93% 24%, 98% 65%, 76% 100%, 50% 100%, 21% 100%, 4% 62%, 5% 26%, 25% 0);
@@ -55,25 +58,25 @@
             display: none;
         }
         :nth-child(11){
-            @include poly(42vw, 10ms, 300px);
+            @include poly(36vw, 10ms, 300px);
         }
         :nth-child(10){
-            @include poly(43.4vw, 150ms, 300px);
+            @include poly(38.4vw, 150ms, 300px);
         }
         :nth-child(9){
-            @include poly(48vw, 200ms, 300px);
+            @include poly(45vw, 200ms, 300px);
         }
         :nth-child(8){
-            @include poly(50vw, 300ms, 300px);
+            @include poly(48vw, 300ms, 300px);
         }
         :nth-child(7){
             @include poly(53vw, 300ms, 300px);
         }
         :nth-child(6){
-            @include poly(57vw, 500ms, 300px);
+            @include poly(56.5vw, 500ms, 300px);
         }
         :nth-child(5){
-            @include poly(59vw, 600ms, 300px);
+            @include poly(59.5vw, 600ms, 300px);
         }
     }
     @media (max-width: 568px) {
@@ -103,13 +106,13 @@
     }
     @media (max-width: 375px) {
         :nth-child(9){
-            @include poly(37vw, 10ms, 150px);
+            @include poly(58vw, 200ms, 150px);
         }
         :nth-child(10){
             @include poly(45vw, 150ms, 150px);
         }
         :nth-child(11){
-            @include poly(58vw, 200ms, 150px);
+            @include poly(37vw, 10ms, 150px);
         }
     }
     @media (max-width: 320px) {

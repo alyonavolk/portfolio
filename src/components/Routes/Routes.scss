@@ -12,18 +12,20 @@
             margin-top: 50px;
         }
     }
+    @media (max-width: 1240px) {
+        &__block{
+            &_top, &_middle{
+                margin-bottom: 30px;
+            }
+        }
+    }
     @media (max-width: 568px) {
         &__main{
             margin-top: 15%;
         }
         &__block{
-            &_top{
+            &_top, &_middle{
                 margin-top: 80px;
-                margin-bottom: 30px;
-            }
-            &_middle{
-                margin-top: 80px;
-                margin-bottom: 30px;
             }
         }
     }

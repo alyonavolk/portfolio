@@ -16,7 +16,9 @@ const Routes = () => {
   
     const lock = useLocation();
     useEffect(() => {
-      setMenu(false)
+      setTimeout(() => {
+        setMenu(false)
+      }, 450);
     }, [lock])
     
     return (

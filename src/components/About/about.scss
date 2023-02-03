@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 70%;
+    max-width: 76%;
     margin: 0 auto;
     &__title{
         @extend %h2;
@@ -32,12 +32,15 @@
     &__link{
         max-width: 180px;
     }
-    @media (max-width: 568px) {
-        max-width: 90%;
+    @media (max-width: 768px) {
+        max-width: 70%;
         &__links{
-            gap: 50px;
+            gap: 60px;
             justify-content: center;
         }
+    }
+    @media (max-width: 568px) {
+        max-width: 90%;
     }
     @media (max-width: 425px) {
         &__links{
