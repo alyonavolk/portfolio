@@ -1,6 +1,10 @@
 import './contactsModal.scss';
 
-const ContactsModal = ({close, text}) => {
+const ContactsModal = ({
+    close, text}: {
+    close: React.MouseEventHandler<HTMLButtonElement>,
+    text: string
+}) => {
     return (
         <div className='modal'>
             <div className='modal__content'>

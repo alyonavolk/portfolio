@@ -2,22 +2,24 @@ import { useRef, useState } from 'react';
 import ContactsInput from '../subComponents/contactsInput/contactsInput';
 import './contacts.scss';
 import ContactsModal from '../subComponents/contactsModal/contactsModal';
-import key from '../../resource/emailkey';
+import key from '../../resources/emailkey';
 
 import { useFormik } from 'formik';
+// import dotenv from 'dotenv';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
 import { CSSTransition } from 'react-transition-group';
 
 
 const Contacts = () => {
-    const [modal, setModal] = useState(false);
-    const modalRef = useRef();
+    // dotenv.config();
+    const [modal, setModal] = useState<boolean>(false);
+    const modalRef = useRef<HTMLDivElement>(null);
     let messageText = 'Сообщение успешно отправлено';
 
     const phoneReg = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
-    const form = useRef();
+    const form = useRef<HTMLFormElement>(null);
 
     const formik = useFormik({
         initialValues: {
@@ -38,7 +40,7 @@ const Contacts = () => {
     })
 
     const onSubmit = () => {
-        emailjs.sendForm(key.SERVICE_ID, key.TEMPLATE_ID, form.current, key.PUBLIC_KEY)
+        emailjs.sendForm(key.SERVICE_ID, key.TEMPLATE_ID, form.current as HTMLFormElement, key.PUBLIC_KEY)
         .then((result) => {
             console.log(result.text);
             messageText = 'Сообщение успешно отправлено';
@@ -71,28 +73,28 @@ const Contacts = () => {
             <form ref={form} id='form' className='form' onSubmit={formik.handleSubmit}>
                 <ul className='form__input'>
                     <li>
-                        <ContactsInput type='text' placeholder='Имя' invalid='' 
+                        <ContactsInput type='text' placeholder='Имя' 
                         name='name' onChange={formik.handleChange} 
                         value={formik.values.name}
                         onBlur={formik.handleBlur}/>
                         {formik.touched.name && formik.errors.name ? <div className='form_error'>{formik.errors.name}</div> : null}
                     </li>
                     <li>
-                        <ContactsInput type='text' placeholder='Фамилия' invalid='' 
+                        <ContactsInput type='text' placeholder='Фамилия'  
                         name='surname' onChange={formik.handleChange} 
                         value={formik.values.surname}
                         onBlur={formik.handleBlur}/>
                         {formik.touched.surname && formik.errors.surname ? <div className='form_error'>{formik.errors.surname}</div> : null}
                     </li>
                     <li>
-                        <ContactsInput type='email' placeholder='Email' invalid='' 
+                        <ContactsInput type='email' placeholder='Email' 
                         name='email' onChange={formik.handleChange} 
                         value={formik.values.email}
                         onBlur={formik.handleBlur}/>
                         {formik.touched.email && formik.errors.email ? <div className='form_error'>{formik.errors.email}</div> : null}
                     </li>
                     <li>
-                        <ContactsInput type='tel' placeholder='Номер телефона' invalid='' 
+                        <ContactsInput type='tel' placeholder='Номер телефона' 
                         name='tel' onChange={formik.handleChange} 
                         value={formik.values.tel}
                         onBlur={formik.handleBlur}/>

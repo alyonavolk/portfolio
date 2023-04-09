@@ -19,10 +19,14 @@
         gap: 40px;
         @extend %link;
         color: $main-text;
+        a.active{
+            color: $sub-text;
+            text-shadow: $sub-text 1px 3px 8px ;
+        }
     }
     &__link{
         transition: text-shadow 0.3s linear;
-        &_active, &:hover{
+        a.active, &:hover{
             color: $sub-text;
             text-shadow: $sub-text 1px 3px 8px ;
         }

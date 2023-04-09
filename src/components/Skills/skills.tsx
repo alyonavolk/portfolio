@@ -1,6 +1,6 @@
 import './skills.scss';
 import SkillsItem from '../subComponents/skillsItem/skillsItem';
-import skill from '../../resource/skills.json';
+import skill from '../../resources/skills.json';
 
 const Skills = () => {
     return (

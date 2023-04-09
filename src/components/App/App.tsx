@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { HashRouter as Router} from 'react-router-dom';
-import './App.scss';
-import Background from '../subComponents/background/background';
-import Switcher from '../subComponents/switcher/switcher';
-import Routes from '../Routes/Routes';
+import React, { useEffect, useState } from 'react';
+import './app.scss';
 
-import {changBg, changVar} from '../../functions/theme';
+import {ThemeContext, ITheme, darkTheme, changBg, changVar} from '../../functions/theme';
+import Switcher from '../subComponents/switcher/switcher';
+import RoutesPages from '../RoutesPages/RoutesPages';
+import Background from '../subComponents/background/background';
 
 
 function App() {
-  const [theme, setTheme] = useState();
-  const [themeAnim, setThemeAnim] = useState(false);
+
+  const [colorTheme, setColorTheme] = useState<ITheme>(darkTheme);
+  const [theme, setTheme] = useState<string>();
+  const [themeAnim, setThemeAnim] = useState<boolean>(false);
+
 
   useEffect(() => {
     
@@ -28,7 +30,7 @@ function App() {
     setTimeout(() => setThemeAnim(false), 400);
   }, [theme, themeAnim])
 
-  const setMode = mode => {
+  const setMode = (mode: string) => {
     window.localStorage.setItem('theme', mode);
     setTheme(mode);
   };
@@ -38,19 +40,20 @@ function App() {
     setMode(theme === 'dark' ? 'light' : 'dark');
   }
 
+
   return (
-    <Router>
+    <ThemeContext.Provider value={colorTheme}>
       <div className={`app ${ themeAnim ? 'app__anim' : ''}`}>
         <div className='app__back'>
           <Background />
         </div>
         <div className='app__content'>
-          <Routes />
+          <RoutesPages />
         </div>
         <Switcher onClick={SwitcherTheme}
             theme={theme === 'dark' ? true : false}/>
       </div>
-    </Router>
+    </ThemeContext.Provider>
   );
 }
 

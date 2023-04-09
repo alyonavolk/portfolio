@@ -1,5 +1,6 @@
 import './about.scss';
 import '../../style/iconStyle.scss';
+import { NavLink } from 'react-router-dom';
 
 const About = () => {
 
@@ -14,8 +15,8 @@ const About = () => {
             </p>
             <ul className='about__links'>
                 <li className='about__link'>
-                    <button className='link__btn icon-Git' 
-                    onClick={() => window.location.href = 'https://github.com/alyonavolk'} />
+                    <NavLink className='link__btn icon-Git' 
+                    to='https://github.com/alyonavolk' />
                    <p className='link__title'>
                         GitHub
                    </p>
@@ -24,8 +25,8 @@ const About = () => {
                    </p>
                 </li>
                 <li className='about__link'>
-                    <button className='link__btn icon-telegram' 
-                    onClick={() => window.location.href = 'https://t.me/die_cookies'} />
+                    <NavLink className='link__btn icon-telegram' 
+                    to='https://t.me/die_cookies' />
                    <p className='link__title'>
                         Telegram
                    </p>
@@ -34,8 +35,8 @@ const About = () => {
                    </p>
                 </li>
                 <li className='about__link'>
-                    <button className='link__btn icon-vk' 
-                    onClick={() => window.location.href = 'https://vk.com/al.volkova20'} />
+                    <NavLink className='link__btn icon-vk' 
+                    to='https://vk.com/al.volkova20' />
                    <p className='link__title'>
                         ВКонтаке
                    </p>
@@ -44,8 +45,8 @@ const About = () => {
                    </p>
                 </li>
                 <li className='about__link'>
-                    <button className='link__btn icon-ds' 
-                    onClick={() => window.location.href = 'https://discordapp.com/users/751402235212070942'} />
+                    <NavLink className='link__btn icon-ds' 
+                    to='https://discordapp.com/users/751402235212070942' />
                    <p className='link__title'>
                         Discord
                    </p>

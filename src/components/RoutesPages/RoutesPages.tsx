@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import './Routes.scss';
-import { BrowserRouter as Route, Switch, useLocation } from 'react-router-dom';
+import './routesPages.scss';
+import { Routes, Route, useLocation } from "react-router-dom";
 import Main from '../Main/main';
 import PageName from '../subComponents/pageName/pageName';
 import About from '../About/about';
@@ -10,11 +10,13 @@ import Header from '../subComponents/header/header';
 import {CSSTransition, TransitionGroup } from 'react-transition-group';
 import Projects from '../Projects/projects';
 import Contacts from '../Сontacts/contacts';
+import { ROUTES } from '../../resources/ROUTES';
 
-const Routes = () => {
-  const [menu, setMenu] = useState();
+const RoutesPages = () => {
+  const [menu, setMenu] = useState<boolean>();
   
     const lock = useLocation();
+    
     useEffect(() => {
       setTimeout(() => {
         setMenu(false)
@@ -24,46 +26,51 @@ const Routes = () => {
     return (
       <>
         <Header menu={menu} setMenu={setMenu} />
-        <TransitionGroup>
+        <TransitionGroup component={null}>
         <CSSTransition timeout = {800}
               classNames = 'fade'
               key={lock.pathname}>
-              <Switch location={lock}>
-                <Route exact path='/'>
+              <Routes location={lock}>
+                <Route path={ROUTES.main} 
+                element={(
                   <div className='content__main'>
                     <PageName>Главная</PageName>
                     <Main />
-                  </div>
-                </Route>
-                <Route exact path='/about'>
+                </div>
+                )} />
+                <Route path={ROUTES.about}
+                element={(
                   <div className='content__block_middle'>
                     <PageName>Обо мне</PageName>
                     <About />
                   </div>
-                </Route>
-                <Route exact path='/skills'>
+                )}/>
+                <Route path={ROUTES.skills}
+                element={(
                   <div className='content__block_middle'>
                     <PageName>Skills</PageName>
                     <Skills />
                   </div>
-                </Route>
-                <Route exact path='/project'>
+                )}/>
+                <Route path={ROUTES.project}
+                element={(
                   <div className='content__block_top'>
                     <PageName>Проекты</PageName>
                     <Projects />
                   </div>
-                </Route>
-                <Route exact path='/contacts'>
+                )}/>
+                <Route path={ROUTES.contacts}
+                element={(
                   <div className='content__block_middle'>
                     <PageName>Контакты</PageName>
                     <Contacts />
                   </div>
-                </Route>
-              </Switch>
+                )}/>
+              </Routes>
         </CSSTransition>
         </TransitionGroup>
       </>
     );
 };
 
-export default Routes;
+export default RoutesPages;
