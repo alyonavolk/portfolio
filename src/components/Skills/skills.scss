@@ -15,18 +15,23 @@
         flex-wrap: wrap;
     }
     &__items{
-        max-width: 800px;
+        max-width: 55vw;
         display: flex;
         flex-wrap: wrap;
-        gap: 4vw 30%;
+        gap: 3vw 20%;
     }
     &__descr{
-        text-align: center;
+        text-align: right;
         max-width: 500px;
-        @extend %mainText;
+        @extend %mediumText;
         color: $sub-text;
+        padding-bottom: 60px;
     }
     @media (max-width: 768px) {
+        &__content{
+            align-items: center;
+            flex-direction: column;
+        }
         &__items{
             gap: 50px;
         }
@@ -34,12 +39,7 @@
             padding-bottom: 20px;
         }
         &__descr{
-            padding-bottom: 20px;
-        }
-    }
-    @media (max-width: 568px) {
-        &__descr{
-            padding: 0 0 60px;  
+            max-width: 400px;
         }
     }
 }

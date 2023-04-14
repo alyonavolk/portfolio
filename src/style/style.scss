@@ -2,21 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lato:wght@300;400;700&family=Manrope:wght@300&display=swap');
 
 *{
-    //font-family: "Lato", sans-serif;
+    font-family: "Lato", sans-serif;
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-    font-family: 'DM Sans', sans-serif;
-    // font-family: 'Lato', sans-serif;
-    // font-family: 'Manrope', sans-serif;
 }
 
 body{
     overflow: hidden;
     width: 100%;
     height: 100%;
-    transition: background-color 400ms linear;
     @media (max-width: 1240px) {
         overflow: scroll;
         scrollbar-width: thin;
@@ -24,6 +20,9 @@ body{
         overflow: auto;
         scrollbar-gutter: stable;
     }
+    // @media (max-width: 568px) {
+    //     background: linear-gradient(to bottom, var(--bg), var(--bg-main));
+    // }
 }
 
 ul,

@@ -9,9 +9,7 @@ const About = () => {
             <h2 className='about__title'>Обо <span>мне</span></h2>
             <h3 className='about__title_grey'>Frontend Developer</h3>
             <p className='about__descr'>
-                My name is Matheus Amauri de Jesus Campos 
-                My name is Matheus Amauri de Jesus Campos 
-                My name is Matheus Amauri de Jesus Campos 
+            Привет! Меня зовут Алёна и я junior front-end разработчик. Я всегда стремлюсь к саморазвитию и изучению новых технологий. Связаться со мной можно через мои профили в социальных сетях (указанных ниже). Буду рада сотрудничеству и новым проектам! 
             </p>
             <ul className='about__links'>
                 <li className='about__link'>

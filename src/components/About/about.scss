@@ -1,12 +1,12 @@
 @import '../../style/variables.scss';
 
 .about{
+    max-width: 76%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 76%;
-    margin: 0 auto;
     &__title{
         @extend %h2;
         padding-bottom: 10px;
@@ -20,7 +20,7 @@
     }
     &__descr{
         @extend %mainText;
-        max-width: 800px;
+        max-width: 1000px;
         color: $main-text;
         padding: 3% 0 10%;
     }

@@ -1,9 +1,4 @@
 /*color*/
-// $dark-black-bg: #1F1F1F;
-// $dark-grey-bg: #171717;
-// $white-bg: #FFFFFF;
-// $text-white-th: #676767;
-
 $img-color: #8e8e8e;
 $beige-bg: #E8E8E8;
 
@@ -54,6 +49,13 @@ $grey-text: var(--grey-text);
     line-height: 31px;
 }
 
+/*текст на странице проекты*/
+%mediumText {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+}
+
 %pageSignature {
     font-weight: 300;
     font-size: 24px;
@@ -90,19 +92,13 @@ $grey-text: var(--grey-text);
 }
 
 @mixin poly($left, $time, $wd) {
-    height: 100%;
     position: absolute;
-    left: $left;
+    height: 100%;
     width: $wd;
+    left: $left;
     top: 0;
     transition: transform 0.5s ease-in;
-    animation-name: animBg;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-delay: $time;
-    //clip-path: polygon(50% 0, 77% 1%, 93% 24%, 98% 65%, 75% 98%, 50% 100%, 21% 98%, 4% 62%, 5% 26%, 25% 1%);
-    //clip-path: polygon(49% 0, 76% 3%, 91% 25%, 96% 68%, 77% 94%, 50% 100%, 21% 95%, 7% 66%, 3% 23%, 25% 4%);
+    animation: animBg 4s forwards $time infinite;
 }
 
 @keyframes animBg {

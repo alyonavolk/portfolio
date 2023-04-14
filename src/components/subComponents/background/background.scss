@@ -80,50 +80,6 @@
         }
     }
     @media (max-width: 568px) {
-        :nth-child(5), :nth-child(6) {
-            display: none;
-        }
-        :nth-child(11){
-            @include poly(32vw, 10ms, 200px);
-        }
-        :nth-child(10){
-            @include poly(37vw, 150ms, 200px);
-        }
-        :nth-child(9){
-            @include poly(45vw, 200ms, 200px);
-        }
-        :nth-child(8){
-            @include poly(53vw, 300ms, 200px);
-        }
-        :nth-child(7){
-            @include poly(64vw, 300ms, 200px);
-        }
-    }
-    @media (max-width: 425px) {
-        :nth-child(7), :nth-child(8) {
-            display: none;
-        }
-    }
-    @media (max-width: 375px) {
-        :nth-child(9){
-            @include poly(58vw, 200ms, 150px);
-        }
-        :nth-child(10){
-            @include poly(45vw, 150ms, 150px);
-        }
-        :nth-child(11){
-            @include poly(37vw, 10ms, 150px);
-        }
-    }
-    @media (max-width: 320px) {
-        :nth-child(11){
-            @include poly(37vw, 10ms, 130px);
-        }
-        :nth-child(10){
-            @include poly(45vw, 150ms, 130px);
-        }
-        :nth-child(9){
-            @include poly(58vw, 200ms, 130px);
-        }
+        display: none;
     }
 }

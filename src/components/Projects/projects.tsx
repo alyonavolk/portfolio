@@ -13,7 +13,7 @@ const Projects = () => {
         <div className='projects'>
             <h2 className='projects__title'>Проекты</h2>
             <p className='projects__descr'>
-                Estes são alguns dos trabalhos e  projetos que já realizei
+                Несколько проектов, выполнены самостоятельно и в команде.
             </p>
             <ul className='projects__items'>
                 <li className='projects__item'>

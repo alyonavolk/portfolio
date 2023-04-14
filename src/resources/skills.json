@@ -1,12 +1,12 @@
 [
-    {"id": "1", "img": "cell", "name": "React"}, 
-    {"id": "2", "img": "cellIn", "name": "HTML"},
-    {"id": "3", "img": "cellIn", "name": "CSS"}, 
-    {"id": "4", "img": "cell", "name": "SASS"},
-    {"id": "5", "img": "cell", "name": "JavaScript"},
-    {"id": "6", "img": "cellIn", "name": "TypeScript"},
-    {"id": "7", "img": "cellIn", "name": "Redux"}, 
-    {"id": "8", "img": "cell", "name": "MySQL"}, 
-    {"id": "9", "img": "cell", "name": "Figma"}, 
-    {"id": "10", "img": "cellIn", "name": "Tilda"}
+    {"id": "1", "img": "cellIn", "name": "JavaScript"},
+    {"id": "2", "img": "cell", "name": "TypeScript"},
+    {"id": "5", "img": "cell", "name": "HTML"},
+    {"id": "6", "img": "cellIn", "name": "CSS / Sass"}, 
+    {"id": "3", "img": "cellIn", "name": "React"}, 
+    {"id": "4", "img": "cell", "name": "Redux"}, 
+    {"id": "7", "img": "cell", "name": "Node.js"},
+    {"id": "8", "img": "cellIn", "name": "NestJS"}, 
+    {"id": "9", "img": "cellIn", "name": "SQL / T-SQL"},
+    {"id": "10", "img": "cell", "name": "Figma"}
 ]

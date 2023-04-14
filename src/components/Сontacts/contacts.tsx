@@ -5,14 +5,12 @@ import ContactsModal from '../subComponents/contactsModal/contactsModal';
 import key from '../../resources/emailkey';
 
 import { useFormik } from 'formik';
-// import dotenv from 'dotenv';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
 import { CSSTransition } from 'react-transition-group';
 
 
 const Contacts = () => {
-    // dotenv.config();
     const [modal, setModal] = useState<boolean>(false);
     const modalRef = useRef<HTMLDivElement>(null);
     let messageText = 'Сообщение успешно отправлено';

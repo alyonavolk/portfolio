@@ -3,11 +3,11 @@
 .switch{
     position: fixed;
     max-width: 300px;
-    z-index: 4;
-    bottom: 8%;
-    left: 6%;
     width: 85px;
     height: 40px;
+    bottom: 8%;
+    left: 6%;
+    z-index: 4;
     border-radius: 100px;
     display: flex;
     transition: all 350ms ease-in;
@@ -36,7 +36,6 @@
             background-image: url('../../../resources/img/moon.svg');
             transition: all 150ms ease-in;
             position: relative;
-
         }
     }
     &_light{

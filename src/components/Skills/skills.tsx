@@ -10,9 +10,7 @@ const Skills = () => {
             </h2>
             <div className='skills__content'>
                 <p className='skills__descr'>
-                    My name is Matheus Amauri de Jesus Campos 
-                    My name is Matheus Amauri de Jesus Campos 
-                    My name is Matheus Amauri de Jesus Campos 
+                     Сбоку представлены мои основные навыки, которые позволяют мне создавать качественные веб-сайты и приложения.
                 </p>
                 <ul className='skills__items'>
                     {skill.map((val) => <SkillsItem key={val.id} img={val.img} title={val.name} />)}
