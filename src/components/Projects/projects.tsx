@@ -6,6 +6,7 @@ import woodtech from '../../resources/img/woodtech.png';
 import healthcare from '../../resources/img/healthcare.png';
 import blog from '../../resources/img/blog.png';
 import shlomo from '../../resources/img/shlomo.png';
+import test from '../../resources/img/test.png';
 import cloverly from '../../resources/img/cloverly.png';
 
 const Projects = () => {
@@ -25,12 +26,12 @@ const Projects = () => {
                     size='high' color='grey' text='healthcare' />
                 </li>
                 <li className='projects__item'>
-                    <ProjectItem img={shlomo} link='https://alyonavolk.github.io/shlomo/' 
-                    size='small' color='light' text='shlomo' />
+                    <ProjectItem img={test} link='https://alyonavolk.github.io/js-test/' 
+                    size='small' color='light' text='js-test' />
                 </li>
                 <li className='projects__item'>
-                    <ProjectItem img={woodtech} link='https://alyonavolk.github.io/woodtech/' 
-                    size='high' color='light' text='woodtech' />
+                    <ProjectItem img={shlomo} link='https://alyonavolk.github.io/shlomo/' 
+                    size='high' color='light' text='shlomo' />
                 </li>
                 <li className='projects__item'>
                     <ProjectItem img={blog} link='https://alyonavolk.github.io/blog-olympiad/' 

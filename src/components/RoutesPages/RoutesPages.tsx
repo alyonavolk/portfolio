@@ -12,10 +12,11 @@ import Projects from '../Projects/projects';
 import Contacts from '../Сontacts/contacts';
 import { ROUTES } from '../../resources/ROUTES';
 
+
 const RoutesPages = () => {
   const [menu, setMenu] = useState<boolean>();
-  
-    const lock = useLocation();
+
+  const lock = useLocation();
     
     useEffect(() => {
       setTimeout(() => {

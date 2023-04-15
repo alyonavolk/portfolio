@@ -1,12 +1,7 @@
-import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import './main.scss';
 
-import { ThemeContext } from '../../functions/theme';
-
 const Main = () => {
-    const themeCtx = useContext(ThemeContext);
-
     return (
         <div className='main'>
             <h1 className='main__title'>
